@@ -11,6 +11,9 @@ With **nobootsound**, you won't need to remember to mute your Mac, and you will 
 ## Modification to the source
 I added the "audiodevice" CLI that let's you quickly change your output device via a terminal command.
 You simply need to put the "audiodevice" file into your /Applications folder so that you can run it by typing /Applications/audiodevice output list for example.
+
+I wanted this modification because I am using Soundflowerbed as my main tool for directing sound to different audio outputs such as external Monitor/bluetooth headphones.
+
 I also tried switchaudio-osx but that did not work!
 
 
