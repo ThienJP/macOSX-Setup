@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# unmute Internal Speakers to have Soundflower handle the sound
+osascript -e "set volume without output muted"
+
+# set audio device back to Soundflower
+/Applications/audiodevice output "Soundflower (2ch)"

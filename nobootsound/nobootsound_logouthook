@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# set audio device to Built-in prior to the osascript down below
+/Applications/audiodevice output "Internal Speakers"
+
+# Mute volume, so that no sound will be played at boot
+osascript -e 'set volume with output muted'
