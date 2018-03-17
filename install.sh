@@ -37,6 +37,9 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
+# disable Dashboard
+defaults write com.apple.dashboard mcx-disabled -boolean TRUE; killall Dock
+
 # disable natural scroll (swipe down to scroll up)
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
@@ -49,6 +52,7 @@ done
 # install homebrew and xcode-cli tools
 echo installing homebrew and xcode-cli tools
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew update
 xcode-select --install
 
 echo installing brew packages
@@ -59,6 +63,7 @@ PACKAGES {
   git
   ffmpeg
   vagrant
+  discord
 }
 
 brew install ${PACKAGES[@]}
