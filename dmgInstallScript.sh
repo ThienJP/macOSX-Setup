@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #set this to the path where you store your .dmg images, no trailing / necessary
-APPS_PATH="/Users/thienjp/Programs/Apps/test"
+APPS_PATH="/Users/thienjp/Programs/Apps/update"
 
 FILES="$APPS_PATH/*.dmg"
     #loops through all .dmg in FILES path
