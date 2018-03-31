@@ -1,7 +1,7 @@
 # this script checks if my bluetooth mouse is connected and if so starts my external monitor setup and turn off wifi
 
 
-if [ $(system_profiler -detaillevel basic SPBluetoothDataType | grep -w 'Logitech MX900\|Connected: Yes' | wc -l) -eq 2 ]; then
+if [ $(system_profiler -detaillevel basic SPBluetoothDataType | pcregrep -M  'Logitech MX900.*(\n|.)*0x2201' | grep 'Connected: Yes' | wc -l) -eq 1 ]; then
     echo "Bluetooth Mouse connected"
     echo "starting external monitor setup..."
 
@@ -25,6 +25,5 @@ if [ $(system_profiler -detaillevel basic SPBluetoothDataType | grep -w 'Logitec
 else
   echo "Bluetooth mouse not connected!"
 fi
-
 
 
