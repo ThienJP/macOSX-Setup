@@ -5,7 +5,7 @@ if [ $(system_profiler -detaillevel basic SPBluetoothDataType | pcregrep -M  'Lo
     echo "starting external monitor setup..."
 
     # since I can't seem to prevent LGS from auto starting I'll quit LGS first 
-    if [[ ! $(ps axo pid,command | grep "[L]ogitech\ Gaming\ Software.app") ]]; then
+    if [[ $(ps axo pid,command | grep "[L]ogitech\ Gaming\ Software.app") ]]; then
       osascript -e 'quit app "Logitech Gaming Software"'
     fi
 
